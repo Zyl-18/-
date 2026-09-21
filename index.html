@@ -18,14 +18,15 @@
 <h3>绒线盒 <span class="small">右侧数字为剩余针脚</span></h3><div id="palette" class="palette" role="group" aria-label="选择绒线"></div>
 <div class="rule-note"><strong>每一段走线，都有代价</strong><p>起针 <b>5</b> · 收针 <b>3</b> · 相邻 <b>1</b><br>跨格按横、纵距离的较大值计线。换色自动收针，提交也会收针。</p></div>
 </section>
-<section class="canvas-section" aria-label="绒绣工作台"><div class="canvas-top"><span>02 / 落针</span><span id="mode-badge">手作挑战</span></div>
+<section class="canvas-section" aria-label="绒绣工作台"><div class="canvas-top"><span>02 / 落针</span><button id="sound-toggle" type="button" aria-pressed="false">音效：关</button><span id="mode-badge">手作挑战</span></div>
 <div class="fabric-frame" id="frame"><canvas id="embroidery" width="720" height="680" tabindex="0" role="application" aria-label="绒绣画布" aria-describedby="canvas-help">请使用支持Canvas的现代浏览器。</canvas><span class="fabric-label" aria-hidden="true">SHANGHAI WOOL EMBROIDERY</span></div>
 <div class="canvas-caption"><div><h2 id="pattern-title"></h2><p id="culture"></p></div><span class="caption-mark" aria-hidden="true">绣<br>作</span></div>
 <p id="feedback" class="feedback" role="status" aria-live="polite">从一枚淡淡的落针点开始。</p>
-<p id="canvas-help" class="small muted">点按淡色针脚即可落针；空心圈标记当前针位。键盘：方向键切换目标，Enter落针。手机可直接轻触。</p>
+<p id="canvas-help" class="small muted">正面针脚统一左下至右上，背面移动仅计线。点按淡色针脚中心即可落针；空心圈标记当前针位。键盘：方向键切换目标，Enter落针。手机可直接轻触。</p>
 </section>
 <aside class="stats panel" aria-label="实时用线数据"><div class="section-heading"><span>03 / 惜线</span><span id="live-color"></span></div><h2>让每一寸绒线有去处</h2>
 <div class="thread-total"><span>已消耗绒线</span><div><strong id="length">0</strong><span>单位</span></div><p>参考省线路线 <b id="reference">0</b> 单位</p></div>
+<div class="best-card"><strong id="personal-best">个人最佳：尚无完整通关纪录</strong><p id="best-note">仅记录本浏览器的完整手作挑战；演示模式不更新纪录。</p></div>
 <div class="progress-label"><span>图案完成度</span><strong id="percent">0%</strong></div><progress id="progress" value="0" max="100" aria-label="图案完成度"></progress>
 <dl class="metrics"><div><dt>起针次数</dt><dd id="starts">0</dd></div><div><dt>收针次数</dt><dd id="ends">0</dd></div><div><dt>跨格次数</dt><dd id="jumps">0</dd></div><div><dt>已完成针脚</dt><dd id="done">0</dd></div><div><dt>剩余针脚</dt><dd id="remaining">0</dd></div><div><dt>当前预估得分</dt><dd><span id="score">0</span><small> /100</small></dd></div></dl>
 <p class="small muted">计分：完成度70分＋省线30分。参考值来自预设可行路线，并非真实工艺耗材或数学最优保证。</p>
@@ -36,5 +37,5 @@
 <section class="value-section"><div><span class="eyebrow">针脚之外</span><h2>用一次互动，走近一门手艺</h2></div><div><h3>项目价值</h3><ul><li>将上海绒绣工艺转化为可互动的数字体验。</li><li>理解走线规划与绒线节约，用AI模拟分析增强学习反馈。</li><li>降低年轻人接触非遗的理解门槛。</li><li>适用于高校非遗课程、文化活动及展览体验。</li></ul></div><div><h3>体验边界与项目风险</h3><ul><li>数字游戏不能完全还原真实绒绣手感。</li><li>AI建议仅作辅助，不能替代专业绒绣教学。</li><li>纹样与工艺解释需由专业人员审核。</li><li>接入真实AI时需控制错误建议；纹样数字化须尊重文化来源和知识产权。</li></ul></div></section>
 </main>
 <footer>本项目为上海绒绣非遗创新大创项目Demo，游戏中的AI分析与工艺数据为模拟内容。</footer>
-<dialog id="result" aria-labelledby="result-title"><div class="result-inner"><span class="eyebrow">一幅绣作，一份惜物之心</span><h2 id="result-title">绣作完成</h2><p id="result-pattern"></p><div class="result-score"><strong id="final-score"></strong><span>综合得分 / 100</span></div><dl id="result-metrics" class="result-metrics"></dl><p id="evaluation"></p><div class="result-actions"><button id="again" class="primary">再次挑战</button><button id="next-pattern">切换纹样</button><button id="close-result">欣赏作品</button></div></div></dialog>
+<dialog id="result" aria-labelledby="result-title"><div class="result-inner"><span class="eyebrow">一幅绣作，一份惜物之心</span><h2 id="result-title">绣作完成</h2><p id="result-pattern"></p><div class="result-score"><strong id="final-score"></strong><span>综合得分 / 100</span></div><dl id="result-metrics" class="result-metrics"></dl><p id="best-comparison" class="best-comparison"></p><p id="evaluation"></p><div class="result-actions"><button id="again" class="primary">再次挑战</button><button id="next-pattern">切换纹样</button><button id="close-result">欣赏作品</button></div></div></dialog>
 </body></html>
